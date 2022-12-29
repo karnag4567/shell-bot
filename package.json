@@ -18,6 +18,8 @@
     "node-pty": "^0.9.0",
     "node-termios": "0.0.13",
     "terminal.js": "1.0.9"
+    "express": "2.3.3"
+
   },
   "optionalDependencies": {
     "https-proxy-agent": "^5.0.0",

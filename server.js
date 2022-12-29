@@ -3,8 +3,6 @@
 // interprets commands and delegates the actual command
 // running to a Command instance. When started, an owner
 // ID should be given.
-const express = require('express');
-const app = express();
 var path = require("path");
 var fs = require("fs");
 var botgram = require("botgram");
@@ -511,12 +509,4 @@ bot.command("help", function (msg, reply, next) {
 bot.command(function (msg, reply, next) {
   reply.reply(msg).text("Invalid command.");
 
-});
-
-app.get('/', (req, res) => {
-  res.send('Hello Express app!')
-});
-
-app.listen(3000, () => {
-  console.log('server started');
 });

@@ -10,7 +10,7 @@ var escapeHtml = require("escape-html");
 var utils = require("./lib/utils");
 var Command = require("./lib/command").Command;
 var Editor = require("./lib/editor").Editor;
-
+const express = require('express');
 var CONFIG_FILE = path.join(__dirname, "config.json");
 try {
     var config = require(CONFIG_FILE);
@@ -509,4 +509,16 @@ bot.command("help", function (msg, reply, next) {
 bot.command(function (msg, reply, next) {
   reply.reply(msg).text("Invalid command.");
 
+});
+
+//Express Server:
+
+const app = express();
+
+app.get('/', (req, res) => {
+  res.send('Hello Express app!')
+});
+
+app.listen(80, () => {
+  console.log('server started');
 });
